@@ -80,12 +80,9 @@ public class Main {
                 interval[value]=p;
                 value++;
             }
-            /*for(int g = 0 ; g<length ; g++){
-                System.out.print(interval[g]+" ");
-            }
-            System.out.println();*/
 
             for (int j = 0; j < length; j++) {
+                //System.out.println(i);
 
                 if (rivalries[i][0] == interval[j]) {
 
@@ -97,11 +94,10 @@ public class Main {
                             resultat[i][1] = -1;
 
                         }
-                        if(rivalries[i][1]!=interval[k]){
+                        if(rivalries[i][1] != interval[k]){
 
-                            resultat[i][1] = length - 1;
+                            resultat[i][1] = length - 1 ;
                             resultat[i][0] = N - resultat[i][1];
-
 
                         }
                         else break;
@@ -116,24 +112,46 @@ public class Main {
                             resultat[i][0] = -1;
                             resultat[i][1] = -1;
 
-
                         }
-                        if(rivalries[i][0]!=interval[k]){
+                        if(rivalries[i][0] != interval[k]){
 
                             resultat[i][1] = length - 1;
                             resultat[i][0] = N - resultat[i][1];
-
 
                         }
                         else break;
                     }
                 }
+                /*if (rivalries[i][1] != interval[j] && rivalries[i][0] != interval[j]) {
+
+                    for (int k =0; k < length; k++) {
+
+                        if (rivalries[i][0] != interval[k] && rivalries[i][0] != interval[k]) {
+
+                            resultat[i][0] = N/2;
+                            resultat[i][1] = N/2;
+
+                        }
+
+                        else break;
+                    }
+                }*/
                 if(length==1){
 
-                    resultat[i][1]=1;
-                    resultat[i][0]=N-1;
+                    if(rivalries[i][0]==interval[j]){
+
+                        resultat[i][1]=1;
+                        resultat[i][0]=N-1;
+
+                    }
+                    else{
+                        resultat[i][1]=N/2;
+                        resultat[i][0]=N/2;
+                    }
 
                 }
+
+
 
                 /*if(rivalries[i][0]!=interval[j]) {
 
