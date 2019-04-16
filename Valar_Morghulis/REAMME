@@ -1,0 +1,5 @@
+#Valar_Morghulis
+This problem consist of solving the number of the army in both of sides , but the problems there's some soldiers that couldn't stay in one side , the way we need to create a matrix show the linking soldier that can stay and can't.
+after that we've also some soldiers we dont know about them anything , and as the problem said , we have an interval about them .
+The first thing we need to create 2 matrixs show the queries about soldier and matrix for the solider that we know about their situation , and put condition :
+if there's more that 2 soldier in one interval , that's mean we can split the army into 2 sides , if there 1 and go on . It around condition about first matrix.
